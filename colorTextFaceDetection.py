@@ -32,7 +32,7 @@ def listToString(s):
     # Initialize an empty string
     str1 = ""
 
-    #  add the elements in the list to the string
+    # Add the elements in the list to the string
     for ele in s:
         str1 += ele
 
@@ -98,7 +98,7 @@ while True:
         blue_mask = cv2.dilate(blue_mask, kernel) 
         res_blue = cv2.bitwise_and(frame, frame, mask = blue_mask)
         
-	    # Create a contour to track red object
+	# Create a contour to track red object
         contours,hierarchy=cv2.findContours(red_mask.copy(), cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
         for pic, contour in enumerate(contours):
             area = cv2.contourArea(contour)
